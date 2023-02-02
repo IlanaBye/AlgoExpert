@@ -17,9 +17,13 @@ function twoNumberSum(array, targetSum) {
 
 // Time: O(N^2) for iterating N times through an array of N values
 // Space: O(N) to create an array
+console.log(twoNumberSum1([3, 5, -4, 8, 11, 1, -1, 6], 10));
+console.log(twoNumberSum1([4, 6], 10));
+console.log(twoNumberSum1([4, 6, 1], 5));
 
+// Solution 2: Array.sort with pointers
 function twoNumberSum(array, targetSum) {
-  console.log(array.sort());
+  // console.log(array.sort());
   array.sort(function (a, b) {
     return a - b;
   });
@@ -38,3 +42,9 @@ function twoNumberSum(array, targetSum) {
   }
   return [];
 }
+
+// Time: O(N log(N)) for sorting and spliting the array
+// Space: O(1) in place
+console.log(twoNumberSum1([3, 5, -4, 8, 11, 1, -1, 6], 10));
+console.log(twoNumberSum1([4, 6], 10));
+console.log(twoNumberSum1([4, 6, 1], 5));
